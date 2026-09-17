@@ -48,6 +48,6 @@ export class UserController {
   @Delete(':id')
   @HttpCode(HttpStatus.NO_CONTENT)
   deleteById(@Param('id') userId: string) {
-    return this.userService.deleteById(userId);
+    this.userService.deleteById(userId);
   }
 }
